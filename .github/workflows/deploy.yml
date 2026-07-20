@@ -30,7 +30,8 @@ jobs:
       - name: Prepare site files
         run: |
           mkdir dist
-          cp index.html styles.css script.js CNAME .nojekyll dist/
+          cp index.html styles.css script.js CNAME dist/
+          touch dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
